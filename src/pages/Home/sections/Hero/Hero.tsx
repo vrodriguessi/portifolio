@@ -8,7 +8,6 @@ import EmailIcon from '@mui/icons-material/Email';
 function Hero() {
   const StyledHero = styled("div")(() => ({
     minHeight: "100vh",
-    backgroundColor: '#1d181a',
     display: "flex",
     alignItems: "center"
   }));
@@ -16,7 +15,7 @@ function Hero() {
   const StyledImg = styled("img")(() => ({
     width: "100%",
     borderRadius: "50%",
-    border: '1px solid #bf6370'
+    border: '1px solid #fff'
   }));
 
   const TypewriterContainer = styled("div")(() => ({
@@ -33,12 +32,13 @@ function Hero() {
   }));
 
   const CustomButton = styled(Button)(() => ({
-    color: "#bf6370",
-    borderColor: "#bf6370",
+    color: "white",
+    borderColor: "white",
     '&:hover': {
-      backgroundColor: "#bf6370",
-      color: "#1d181a",
-    }
+      backgroundColor: "white",
+      color: "#bf6370",
+      border: '0 none',
+    },
   }));
 
   return (
@@ -49,10 +49,10 @@ function Hero() {
             <StyledImg src={Avatar} />
           </Grid>
           <Grid item xs={12} sm={8}>
-            <Typography color="secondary" variant="h1" textAlign="center">
+            <Typography color="white" variant="h1" textAlign="center">
               Hello, I'm Verônica França
             </Typography>
-            <Typography color="secondary" variant="h2" textAlign="center">
+            <Typography color="white" variant="h2" textAlign="center">
               <TypewriterContainer>
                 <TypeAnimation
                   sequence={[
@@ -66,7 +66,7 @@ function Hero() {
                   wrapper="span"
                   cursor={true}
                   repeat={Infinity}
-                  style={{ display: 'inline-block', color: "secondary", fontWeight: 'bold' }}
+                  style={{ display: 'inline-block', color: "white", fontWeight: 'bold' }}
                 />
               </TypewriterContainer>
             </Typography>
