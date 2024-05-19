@@ -19,10 +19,10 @@ function Hero() {
   const TypewriterContainer = styled("div")(() => ({
     height: "auto",
     "@media (max-width: 600px)": {
-      height: "230px", // Altura do TypeWriter para telas pequenas
+      height: "130px", // Altura do TypeWriter para telas pequenas
     },
     "@media (min-width: 601px) and (max-width: 960px)": {
-      height: "160px", // Altura do TypeWriter para telas médias e grandes
+      height: "80px", // Altura do TypeWriter para telas médias e grandes
     }
   }));
 
@@ -51,7 +51,7 @@ function Hero() {
                   wrapper="span"
                   cursor={true}
                   repeat={Infinity}
-                  style={{ display: 'inline-block', color: '#1976d2', fontWeight: 'bold' }}
+                  style={{ display: 'inline-block', color: '#1a1b1c', fontWeight: 'bold' }}
                 />
               </TypewriterContainer>
             </Typography>
