@@ -6,23 +6,23 @@ import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 
 function Hero() {
-  const StyledHero = styled("div")(() => ({
-    backgroundColor: 'black',
+  const StyledHero = styled("div")(( ) => ({
+    backgroundColor: '#1d181a',
     height: "100vh"
-  }));
+}));
 
   const StyledImg = styled("img")(() => ({
-    width: "100%",
-    borderRadius: "50%",
+  width: "100%",
+  borderRadius: "50%",
   }));
 
   const TypewriterContainer = styled("div")(() => ({
-    height: "auto",
-    "@media (max-width: 600px)": {
-      height: "130px", // Altura do TypeWriter para telas pequenas
-    },
-    "@media (min-width: 601px) and (max-width: 960px)": {
-      height: "80px", // Altura do TypeWriter para telas médias e grandes
+  height: "auto",
+  "@media (max-width: 600px)": {
+    height: "100px", // Altura do TypeWriter para telas pequenas
+  },
+  "@media (min-width: 601px) and (max-width: 960px)": {
+    height: "130px", // Altura do TypeWriter para telas médias e grandes
     }
   }));
 
@@ -34,10 +34,10 @@ function Hero() {
             <StyledImg src={Avatar} />
           </Grid>
           <Grid item xs={12} sm={8} >
-            <Typography color="primary" variant="h1" textAlign="center">
+            <Typography color="secondary" variant="h1" textAlign="center">
               Hello, I'm Verônica França
             </Typography>
-            <Typography color="primary" variant="h2" textAlign="center">
+            <Typography color="secondary" variant="h2" textAlign="center">
               <TypewriterContainer>
                 <TypeAnimation
                   sequence={[
@@ -51,20 +51,20 @@ function Hero() {
                   wrapper="span"
                   cursor={true}
                   repeat={Infinity}
-                  style={{ display: 'inline-block', color: '#1a1b1c', fontWeight: 'bold' }}
+                  style={{ display: 'inline-block', color: "secondary", fontWeight: 'bold' }}
                 />
               </TypewriterContainer>
             </Typography>
             <Grid container display="flex" justifyContent="center">
               <Grid item xs={12} sm={4} display="flex" justifyContent="center">
-                <Button>
-                  <DownloadIcon></DownloadIcon>
+                <Button color="secondary" variant="outlined">
+                  <DownloadIcon/>
                   Download CV
-                </Button>
+                </Button >
               </Grid>
               <Grid item xs={12} sm={4} display="flex" justifyContent="center">
-                <Button>
-                  <EmailIcon></EmailIcon>
+                <Button color="secondary" variant="outlined">
+                  <EmailIcon/>
                   Contact me
                 </Button>
               </Grid>
@@ -75,5 +75,6 @@ function Hero() {
     </StyledHero>
   );
 }
+
 
 export default Hero;
