@@ -13,44 +13,56 @@ function Hero() {
 
   const StyledImg = styled("img")(() => ({
     width: "100%",
-    borderRadius: "50%"
+    borderRadius: "50%",
+  }));
+
+  const TypewriterContainer = styled("div")(() => ({
+    height: "auto",
+    "@media (max-width: 600px)": {
+      height: "230px", // Altura do TypeWriter para telas pequenas
+    },
+    "@media (min-width: 601px) and (max-width: 960px)": {
+      height: "160px", // Altura do TypeWriter para telas médias e grandes
+    }
   }));
 
   return (
     <StyledHero>
-      <Container>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={4} md={4}>
+      <Container maxWidth="lg">
+        <Grid container spacing={2} >
+          <Grid item xs={12} sm={4} >
             <StyledImg src={Avatar} />
           </Grid>
-          <Grid item xs={12} sm={8} md={8}>
+          <Grid item xs={12} sm={8} >
             <Typography color="primary" variant="h1" textAlign="center">
               Hello, I'm Verônica França
             </Typography>
             <Typography color="primary" variant="h2" textAlign="center">
-              <TypeAnimation
-                sequence={[
-                  'A Software Engineer',
-                  1000,
-                  'A Web Developer',
-                  1000,
-                  'A Tech Enthusiast',
-                  1000,
-                ]}
-                wrapper="span"
-                cursor={true}
-                repeat={Infinity}
-                style={{ display: 'inline-block', color: '#1976d2', fontWeight: 'bold' }}
-              />
+              <TypewriterContainer>
+                <TypeAnimation
+                  sequence={[
+                    'A Software Engineer',
+                    1000,
+                    'A Web Developer',
+                    1000,
+                    'A Tech Enthusiast',
+                    1000,
+                  ]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                  style={{ display: 'inline-block', color: '#1976d2', fontWeight: 'bold' }}
+                />
+              </TypewriterContainer>
             </Typography>
-            <Grid container>
-              <Grid item xs={12} sm={6} md={4}>
+            <Grid container display="flex" justifyContent="center">
+              <Grid item xs={12} sm={4} display="flex" justifyContent="center">
                 <Button>
                   <DownloadIcon></DownloadIcon>
                   Download CV
                 </Button>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={4} display="flex" justifyContent="center">
                 <Button>
                   <EmailIcon></EmailIcon>
                   Contact me
