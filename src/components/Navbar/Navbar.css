@@ -58,5 +58,34 @@
     width: 100%;
     transform: translateX(0);
     opacity: 1;
+}
 
+.menu-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+
+.menu-btn:hover {
+    color: #af2a3b;
+    background-color: #fff;
+    border: 1px solid #af2a3b;
+}
+
+@media (max-width: 769px) {
+    .menu-btn {
+        display: block;
+    }
+    .nav-content ul {
+        display: none;
+    }
 }

@@ -1,6 +1,6 @@
-import React from 'react';
 import "./Navbar.css"
 import logo from '../../assets/images/logo.png';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Navbar() {
   return (
@@ -19,6 +19,11 @@ function Navbar() {
               <a className="menu-item">Work Experience</a>
             </li>
           </ul>
+          <button className="menu-btn">
+            <span>
+                <MenuIcon />
+            </span>
+          </button>
         </div>
       </nav>
     </>
