@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Verônica França's Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+This project is a personal website for Verônica França, showcasing her profile as a software engineer. It features a hero section with an introduction, animated text, and a navigation bar.
 
-Currently, two official plugins are available:
+## Components
+**Hero**
+  
+The Hero component is a full-screen section that introduces Verônica França. It includes a profile picture, animated text showcasing different roles, and buttons for downloading the CV and contacting Verônica.
+  
+**Navbar**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple navigation bar with a logo and links to different sections of the website.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Dependencies
+- React: A JavaScript library for building user interfaces.
+- Emotion: A library for styling React components.
+- Material-UI: A React UI framework implementing Google's Material Design.
+- react-type-animation: A library for creating typing animations in React.
+- Vite: A build tool that provides a fast development server and optimized build process for modern web applications.
+  
+Vite is used as the build tool for this project. It offers fast project startup times, efficient hot module replacement during development, and optimized production builds. Vite leverages the native ES modules support in modern browsers, resulting in faster build times compared to traditional bundlers like Webpack.
