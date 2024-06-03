@@ -3,14 +3,20 @@ import logo from '../../assets/images/logo.png';
 import MenuIcon from '@mui/icons-material/Menu';
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
+import { useState } from "react";
+import MobileNav from "./MobileNav/MobileNav";
 
 function Navbar() {
-	const handleClick = () => {
-		// Sua lógica de manipulação de evento aqui
-	};
+
+	const [openMenu, setOpenMenu] = useState(false);
+
+	const toggleMenu = () => {
+		setOpenMenu(!openMenu);
+	}
 
 	return (
 		<>
+		<MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
 			<nav className="nav-wrapper">
 				<div className="nav-content">
 					<img className="logo" src={logo} alt="Logo" />
@@ -37,8 +43,9 @@ function Navbar() {
 							</a>
 						</li>
 					</ul>
-					<button className="menu-btn" onClick={handleClick}>
+					<button className="menu-btn" onClick={toggleMenu}>
 						<span>
+							{openMenu ?"close" : "menu"}
 							<MenuIcon />
 						</span>
 					</button>
