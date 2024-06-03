@@ -1,10 +1,7 @@
 import styled from "@emotion/styled";
 import Avatar from "../../../../assets/images/avatar.png";
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import { TypeAnimation } from 'react-type-animation';
-import DownloadIcon from '@mui/icons-material/Download';
-import EmailIcon from '@mui/icons-material/Email';
-
 function Hero() {
   const StyledHero = styled("div")(() => ({
     minHeight: "100vh",
@@ -28,16 +25,6 @@ function Hero() {
     },
     "@media (min-width: 961px)": {
       height: "80px", // Altura do TypeWriter para telas grandes
-    },
-  }));
-
-  const CustomButton = styled(Button)(() => ({
-    color: "white",
-    borderColor: "white",
-    '&:hover': {
-      backgroundColor: "white",
-      color: "#bf6370",
-      border: '0 none',
     },
   }));
 
@@ -70,18 +57,6 @@ function Hero() {
                 />
               </TypewriterContainer>
             </Typography>
-            <Grid container display="flex" justifyContent="center">
-              <Grid item xs={12} sm={4} display="flex" justifyContent="center">
-                <CustomButton variant="outlined" startIcon={<DownloadIcon />}>
-                  Download CV
-                </CustomButton>
-              </Grid>
-              <Grid item xs={12} sm={4} display="flex" justifyContent="center">
-                <CustomButton variant="outlined" startIcon={<EmailIcon />}>
-                  Contact me
-                </CustomButton>
-              </Grid>
-            </Grid>
           </Grid>
         </Grid>
       </Container>
