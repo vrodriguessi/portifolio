@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import logo from '../../assets/images/logo.png';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import { useState } from "react";
@@ -44,9 +45,8 @@ function Navbar() {
 						</li>
 					</ul>
 					<button className="menu-btn" onClick={toggleMenu}>
-						<span>
-							{openMenu ?"close" : "menu"}
-							<MenuIcon />
+						<span className="menu-icon">
+							{openMenu ? <CloseIcon /> : <MenuIcon />}
 						</span>
 					</button>
 				</div>
