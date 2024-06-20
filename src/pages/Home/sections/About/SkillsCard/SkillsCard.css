@@ -8,6 +8,7 @@
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-bottom: 2rem; 
 }
 
 .skills-card:hover {
@@ -21,12 +22,13 @@
 .skills-card img {
     width: 2.5rem;
     height: auto;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 .skills-card span {
     font-size: 1.3rem;
     font-weight: 500;
+    color: #fff;
 }
 
 .skills-icon {

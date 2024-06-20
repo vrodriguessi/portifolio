@@ -108,6 +108,7 @@
   
   .custom-button {
 	text-decoration: none;
+	margin-right: 5px;
 	color: white;
 	border: 1px solid white;
 	padding: 6px 12px;
@@ -116,10 +117,6 @@
 	align-items: center;
 	justify-content: center;
 	transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .custom-button {
-	margin-right: 5px;
   }
   
   .custom-button:hover {

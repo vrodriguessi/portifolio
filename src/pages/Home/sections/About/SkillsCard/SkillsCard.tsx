@@ -1,5 +1,3 @@
-// SkillsCard.tsx
-
 import React from "react";
 import "./SkillsCard.css";
 

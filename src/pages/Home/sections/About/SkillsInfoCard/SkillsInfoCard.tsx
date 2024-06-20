@@ -2,13 +2,13 @@ import React from "react";
 import './SkillsInfoCard.css';
 
 interface Skill {
-  name: string;
-  percentage: string;
+    name: string;
+    percentage: string;
 }
 
 interface SkillsInfoCardProps {
-  heading: string;
-  skills: Skill[];
+    heading: string;
+    skills: Skill[];
 }
 
 const SkillsInfoCard: React.FC<SkillsInfoCardProps> = ({ heading, skills }) => {
@@ -18,11 +18,13 @@ const SkillsInfoCard: React.FC<SkillsInfoCardProps> = ({ heading, skills }) => {
             <div className="skills-info-content">
                 {skills.map((item, index) => (
                     <div key={index} className="skill-info">
-                        <p>{item.name}</p>
+                        <div className="skill-name">
+                            <p>{item.name}</p>
+                            <p className="percentage">{item.percentage}</p>
+                        </div>
                         <div className="skill-progress">
                             <div className="skill-progress-bar" style={{ width: item.percentage }}></div>
                         </div>
-                        <p className="percentage">{item.percentage}</p>
                     </div>
                 ))}
             </div>
