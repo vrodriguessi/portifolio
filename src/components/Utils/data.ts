@@ -31,6 +31,8 @@ export const SKILLS: SkillCategory[] = [
     skills: [
       { name: "Python", percentage: "80%" },
       { name: "Node.js", percentage: "70%" },
+      { name: "Adonis.js", percentage: "85%"},
+      { name: "SpringBoot", percentage: "90%"},
     ],
   },
   {
